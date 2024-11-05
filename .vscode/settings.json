@@ -1,0 +1,13 @@
+{
+    "java.project.sourcePaths": [
+        ".",
+        "Lesson 1",
+        "Lesson 2",
+        "Lesson 3",
+        "Lesson 4"
+    ],
+    "java.project.referencedLibraries": [
+        "json-20240303.jar",
+        "c:\\Users\\Asus\\Downloads\\Java\\gson-2.11.0.jar"
+    ]
+}
