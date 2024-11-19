@@ -24,8 +24,8 @@ class Student{
 class Overload {
     public static void main(String[] args){
         Student student = new Student();
-        Student student1 = new Student(1, "Saral");
-        Student student2 = new Student(2, "Saurav", 2300.234f);
+        Student student1 = new Student(1, "Coding");
+        Student student2 = new Student(2, "IDK", 2300.234f);
         student.displayDetails();
         student1.displayDetails();
         student2.displayDetails();

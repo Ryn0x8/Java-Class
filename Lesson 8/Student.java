@@ -16,7 +16,7 @@ class Child extends Parent{
 public class Student {
     public static void main(String[] args){
         Child s = new Child();
-        s.naming("Saral");
+        s.naming("Coding");
         s.ageN(14);
     }
     
