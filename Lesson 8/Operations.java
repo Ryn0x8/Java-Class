@@ -38,50 +38,39 @@ class Division extends Multiplication {
 
 public class Operations {
     public static void main(String[] args) {
-        try{
-        Scanner keyboard = new Scanner(System.in);
-        Division calculator = new Division();
+        try (Scanner keyboard = new Scanner(System.in)) {
+            Division calculator = new Division();
 
-        System.out.println("Enter two numbers:");
-        int num1 = keyboard.nextInt();
-        int num2 = keyboard.nextInt();
-        calculator.setNumbers(num1, num2);
+            System.out.println("Enter two numbers:");
+            int num1 = keyboard.nextInt();
+            int num2 = keyboard.nextInt();
+            calculator.setNumbers(num1, num2);
 
-        System.out.println("Choose an operation: ");
-        System.out.println("1 - Addition");
-        System.out.println("2 - Subtraction");
-        System.out.println("3 - Multiplication");
-        System.out.println("4 - Division");
+            System.out.println("Choose an operation: ");
+            System.out.println("1 - Addition");
+            System.out.println("2 - Subtraction");
+            System.out.println("3 - Multiplication");
+            System.out.println("4 - Division");
 
-        int choice = keyboard.nextInt();
-        keyboard.close();
-        
+            int choice = keyboard.nextInt();
 
-        switch (choice) {
-            case 1:
-                System.out.println("Result: " + calculator.add());
-                break;
-            case 2:
-                System.out.println("Result: " + calculator.subtract());
-                break;
-            case 3:
-                System.out.println("Result: " + calculator.multiply());
-                break;
-            case 4:
-                try {
-                    System.out.println("Result: " + calculator.divide());
-                } catch (ArithmeticException e) {
-                    System.out.println(e.getMessage());
+            switch (choice) {
+                case 1 -> System.out.println("Result: " + calculator.add());
+                case 2 -> System.out.println("Result: " + calculator.subtract());
+                case 3 -> System.out.println("Result: " + calculator.multiply());
+                case 4 -> {
+                    try {
+                        System.out.println("Result: " + calculator.divide());
+                    } catch (ArithmeticException e) {
+                        System.out.println(e.getMessage());
+                    }
                 }
-                break;
-            default:
-                System.out.println("Invalid choice");
-        }            
-
+                default -> System.out.println("Invalid choice");
+            }
+        } catch (Exception e) {
+            System.out.println("An error occurred: " + e.getMessage());
+        }
     }
-catch (Exception e) {
 
 }
 
-}
-}
