@@ -1,6 +1,6 @@
 class SingleTable {
-    private int numSeats;
-    private int height;
+    private final int numSeats;
+    private final int height;
     private double viewQuality;
 
     public SingleTable(int numSeats, int height, double viewQuality) {
@@ -27,8 +27,8 @@ class SingleTable {
 }
 
 class CombinedTable {
-    private SingleTable table1;
-    private SingleTable table2;
+    private final SingleTable table1;
+    private final SingleTable table2;
 
     public CombinedTable(SingleTable t1, SingleTable t2) {
         this.table1 = t1;
